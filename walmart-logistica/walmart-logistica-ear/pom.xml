@@ -1,0 +1,83 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>br.com.walmart.logistica</groupId>
+		<artifactId>walmart-logistica</artifactId>
+		<version>0.1-SNAPSHOT</version>
+	</parent>
+
+	<name>Modulo de geracao de pacote ear</name>
+	<artifactId>walmart-logistica-ear</artifactId>
+	<packaging>ear</packaging>
+
+	<dependencies>
+		<dependency>
+			<groupId>br.com.walmart.logistica</groupId>
+			<artifactId>walmart-logistica-service</artifactId>
+			<version>${project.version}</version>
+			<type>ejb</type>
+		</dependency>
+
+		<dependency>
+			<groupId>br.com.walmart.logistica</groupId>
+			<artifactId>walmart-logistica-common</artifactId>
+			<version>${project.version}</version>
+			<type>jar</type>
+		</dependency>
+
+		<dependency>
+			<groupId>br.com.walmart.logistica</groupId>
+			<artifactId>walmart-logistica-ws</artifactId>
+			<version>${project.version}</version>
+			<type>war</type>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-api</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-core</artifactId>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<finalName>walmart-logistica</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-ear-plugin</artifactId>
+				<version>2.6</version>
+				<inherited>true</inherited>
+				<configuration>
+					<version>5</version>
+					<defaultLibBundleDir>lib</defaultLibBundleDir>
+					<generateApplicationXml>true</generateApplicationXml>
+					<modules>
+						<ejbModule>
+							<groupId>br.com.walmart.logistica</groupId>
+							<artifactId>walmart-logistica-service</artifactId>
+						</ejbModule>
+
+						<jarModule>
+							<groupId>br.com.walmart.logistica</groupId>
+							<artifactId>walmart-logistica-common</artifactId>
+						</jarModule>
+
+						<webModule>
+							<groupId>br.com.walmart.logistica</groupId>
+							<artifactId>walmart-logistica-ws</artifactId>
+							<contextRoot>walmart-logistica-ws</contextRoot>
+						</webModule>
+					</modules>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>

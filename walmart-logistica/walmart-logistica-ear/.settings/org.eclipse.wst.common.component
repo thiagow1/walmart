@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="walmart-logistica">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/application" tag="defaultRootSource"/>
+        <dependent-module archiveName="walmart-logistica-service-0.1-SNAPSHOT.jar" deploy-path="/" handle="module:/resource/walmart-logistica-service/walmart-logistica-service">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="walmart-logistica-common-0.1-SNAPSHOT.jar" deploy-path="/lib" handle="module:/resource/walmart-logistica-common/walmart-logistica-common">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="walmart-logistica-ws-0.1-SNAPSHOT.war" deploy-path="/" handle="module:/resource/walmart-logistica-ws/walmart-logistica-ws">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="jsoup-1.7.3.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/jsoup/jsoup/1.7.3/jsoup-1.7.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="junit-4.11.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/junit/junit/4.11/junit-4.11.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="hamcrest-core-1.3.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="log4j-api-2.0-rc2.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/apache/logging/log4j/log4j-api/2.0-rc2/log4j-api-2.0-rc2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="log4j-core-2.0-rc2.jar" deploy-path="/lib" handle="module:/classpath/var/M2_REPO/org/apache/logging/log4j/log4j-core/2.0-rc2/log4j-core-2.0-rc2.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

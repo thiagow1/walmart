@@ -1,2 +1,0 @@
-# walmart
-Desafio Malha Logística
