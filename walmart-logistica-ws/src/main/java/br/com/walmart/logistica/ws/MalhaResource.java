@@ -15,6 +15,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import br.com.walmart.logistica.exception.ApplicationException;
+import br.com.walmart.logistica.exception.RotaNaoEncontradaException;
 import br.com.walmart.logistica.model.vo.MalhaVO;
 import br.com.walmart.logistica.model.vo.RotaEntregaVO;
 import br.com.walmart.logistica.model.vo.RotaVO;
@@ -66,6 +67,8 @@ public class MalhaResource {
 			
 			RotaEntregaVO rotaCalculada = malhaService.calcularRota(rotaVO);
 			response = Response.ok(rotaCalculada.getRetorno()).build();
+		} catch (RotaNaoEncontradaException e) {
+			response = Response.status(Status.BAD_REQUEST).entity(e.getMessage()).build();
 		} catch (ApplicationException e) {
 			response = Response.status(Status.INTERNAL_SERVER_ERROR).entity(e.getMessage()).build();
 		} finally {

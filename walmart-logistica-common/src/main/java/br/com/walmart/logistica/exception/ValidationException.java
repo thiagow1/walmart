@@ -1,6 +1,6 @@
 package br.com.walmart.logistica.exception;
 
-public class ValidationException extends ApplicationException {
+public class ValidationException extends Exception {
 
 	private static final long serialVersionUID = -7174667137276257041L;
 
