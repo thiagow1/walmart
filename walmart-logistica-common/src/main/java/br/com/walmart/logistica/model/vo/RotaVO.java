@@ -2,6 +2,12 @@ package br.com.walmart.logistica.model.vo;
 
 import java.io.Serializable;
 
+/**
+ * Classe responsável por manter os dados de entrada do WebService calcularRota
+ * 
+ * @author Thiago
+ *
+ */
 public class RotaVO implements Serializable{
 	
 	private static final long serialVersionUID = 7071975024652798908L;

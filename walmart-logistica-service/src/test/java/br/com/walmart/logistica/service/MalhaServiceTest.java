@@ -15,6 +15,11 @@ import br.com.walmart.logistica.model.vo.RotaEntregaVO;
 import br.com.walmart.logistica.model.vo.RotaVO;
 import br.com.walmart.logistica.processor.MalhaProcessor;
 
+/**
+ * Classe responsável por realizar os testes JUnit da Malha
+ * 
+ * @author Thiago
+ */
 public class MalhaServiceTest {
 
 	@Test

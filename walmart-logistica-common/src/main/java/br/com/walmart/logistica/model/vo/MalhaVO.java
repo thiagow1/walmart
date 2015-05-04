@@ -3,6 +3,12 @@ package br.com.walmart.logistica.model.vo;
 import java.io.Serializable;
 import java.util.List;
 
+/**
+ * Classe responsável por manter os dados na realização da carga de Malha
+ * 
+ * @author Thiago
+ *
+ */
 public class MalhaVO implements Serializable{
 	
 	private static final long serialVersionUID = -2824663314768464371L;

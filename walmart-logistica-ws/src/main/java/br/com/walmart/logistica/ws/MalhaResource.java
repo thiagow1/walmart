@@ -21,6 +21,11 @@ import br.com.walmart.logistica.model.vo.RotaEntregaVO;
 import br.com.walmart.logistica.model.vo.RotaVO;
 import br.com.walmart.logistica.service.MalhaService;
 
+/**
+ * Classe responsável pela distruição do WebService da Malha
+ * 
+ * @author Thiago
+ */
 @Stateless
 @Path("/rest/malha")
 public class MalhaResource {

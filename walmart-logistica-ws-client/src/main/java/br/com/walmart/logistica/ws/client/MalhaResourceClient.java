@@ -7,6 +7,11 @@ import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
 
+/**
+ * Classe responsável por efetuar chamadas do WebService da Malha.
+ * 
+ * @author Thiago
+ */
 public class MalhaResourceClient {
 	private static final Logger LOGGER = LogManager.getLogger(MalhaResourceClient.class);
 	

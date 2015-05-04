@@ -1,5 +1,6 @@
-# Walmart - Desafio Entregando Mercadorias
-##Descrição
+# Walmart
+##Desafio Entregando Mercadorias
+**Descrição**
 
 O Walmart esta desenvolvendo um novo sistema de logistica e sua
 ajuda é muito importante neste momento. Sua tarefa será desenvolver
@@ -44,7 +45,8 @@ desenvolvimento desse sistema, nós solicitamos que você utilize a
 sua (ou as suas) linguagem de programação principal. Pode ser Java,
 JavaScript ou Ruby.
 
-##Ambiente Utilizado
+**Ambiente Utilizado**
+
 * Windows 8.1 64 bits
 * Eclipse Luna 
  * https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/luna/SR2/eclipse-jee-luna-SR2-win32-x86_64.zip
@@ -56,7 +58,8 @@ JavaScript ou Ruby.
  * https://maven.apache.org/download.cgi
 * Banco de Dados H2 Embedded (Não precisa de instalação)
 
-## Frameworks Utilizados
+**Frameworks Utilizados**
+
 * Maven
 * JEE 7
 * JPA
@@ -64,9 +67,23 @@ JavaScript ou Ruby.
 * ReastEasy do Jboss 
 * Jersey-Client para o client
 
+**Configuração do H2**
+
+É necessário incluir o código abaixo na área de datasources no standalone.xml do WildFly
+
+<pre>
+<code>
+&lt;datasource jndi-name=&quot;java:/walmart&quot; pool-name=&quot;walmart&quot; enabled=&quot;true&quot; use-java-context=&quot;true&quot;&gt; 
+&lt;connection-url&gt;jdbc:h2:~/walmart&lt;/connection-url&gt; 
+&lt;driver&gt;h2&lt;/driver&gt; 
+&lt;security&gt; 
+&lt;user-name&gt;sa&lt;/user-name&gt; 
+&lt;/security&gt; 
+&lt;/datasource&gt;
+</code>
+</pre>
+
 ## Observações
 * O Banco de dados é criado automaticamente na pasta do Usuário ao iniciar o servidor, caso não exista.
-* Url Calcular Rota http://localhost:8080/walmart-logistica-ws/rest/malha/calcularRota/TESTE/A/D/10/2.5
-* No projeto walmart-logistica-ws-client é possível executar a carga de malhas
-
-**Falta incluir mais testes e documentações**
+* Foram implementados testes JUnit no projeto walmart-logistica-service.
+* No projeto walmart-logistica-ws-client é possível executar chamadas ao webService disponibilizado utilizando o Jersey-Client.

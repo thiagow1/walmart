@@ -6,6 +6,12 @@ import java.util.List;
 
 import br.com.walmart.logistica.model.entity.Ponto;
 
+/**
+ * Classe responsável por manter os dados das rotas que serão utilizadas.
+ * 
+ * @author Thiago
+ *
+ */
 public class RotaEntregaVO implements Serializable{
 	
 	private static final long serialVersionUID = 7071975024652798908L;

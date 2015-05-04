@@ -15,6 +15,12 @@ import br.com.walmart.logistica.model.vo.MalhaVO;
 import br.com.walmart.logistica.model.vo.RotaEntregaVO;
 import br.com.walmart.logistica.model.vo.RotaVO;
 
+/**
+ * Classe responsável por realizar a carga e calcular a rota mais próxima de uma determinada malha.
+ * 
+ * @author Thiago
+ *
+ */
 public class MalhaProcessor {
 	
 	private void validaMalha(MalhaVO malhaVO) throws ValidationException {

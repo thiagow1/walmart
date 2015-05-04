@@ -13,6 +13,11 @@ import br.com.walmart.logistica.model.vo.RotaEntregaVO;
 import br.com.walmart.logistica.model.vo.RotaVO;
 import br.com.walmart.logistica.processor.MalhaProcessor;
 
+/**
+ * Classe responsável por tratar as chamadas de serviço da Malha 
+ * 
+ * @author Thiago
+ */
 @Stateless
 public class MalhaServiceBean implements MalhaService {
 

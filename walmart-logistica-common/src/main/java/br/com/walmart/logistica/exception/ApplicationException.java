@@ -1,5 +1,10 @@
 package br.com.walmart.logistica.exception;
 
+/**
+ * Classe responsável por tratar exceções transacionais efetuando o rollback caso ocorra algum erro
+ * 
+ * @author Thiago
+ */
 @javax.ejb.ApplicationException(rollback = true)
 public class ApplicationException extends Exception {
 
