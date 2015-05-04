@@ -1,0 +1,17 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Other Files #
+.project
+target
+.settings
+.classpath
+.apt_generated
+.factorypath
+.metadata
+release.properties
+pom.xml.releaseBackup
